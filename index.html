@@ -19,7 +19,7 @@
         <div class="current_time">
 
         </div>
-        <div class="alarm-time">
+        <div class="alarm_time">
 
         </div>
         <div class="alarm">
@@ -27,11 +27,11 @@
         </div>
     </div>
     <script>
-        /*
+        
         var a_hour = window.prompt("Enter the hour")
         var a_minute = window.prompt("Enter the minute")
         var a_second = window.prompt("Enter the second")
-        */
+        
         //document.querySelector('.alarm').textContent = a_hour
 
         function current_date() {
@@ -39,14 +39,14 @@
             let hours = d.getHours()
             let minutes = d.getMinutes()
             let seconds = d.getSeconds()
-            document.querySelector('.alarm').textContent = hours + ":" + minutes + ":" + seconds
+            document.querySelector('.current_time').textContent = hours + ":" + minutes + ":" + seconds
+            document.querySelector('.alarm_time').textContent = a_hour + ":" + a_minute + ":" + a_second
+            if(a_hour == hours && a_second == seconds && a_minute == minutes ) {
+            document.querySelector('.alarm').textContent = "Time is over"
+            }
             setTimeout(current_date, 1000)
         }
         current_date()
-
-        if(a_hour == hours && a_second == seconds && a_minute == minutes ) {
-            
-        }
         //challenge take the input from the user, is the input is = to the realtime print something or change html of this one.
     </script>
 </body>
